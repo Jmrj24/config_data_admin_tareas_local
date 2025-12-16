@@ -30,5 +30,5 @@ resilience4j:
         waitDurationInOpenState: 10s
         recordExceptions:
           - feign.FeignException
-          - java.lang.RuntimeException
+          - java.lang.IllegalStateException
 
