@@ -32,3 +32,5 @@ resilience4j:
           - feign.FeignException
           - org.springframework.cloud.client.loadbalancer.LoadBalancerException
           - java.lang.IllegalStateException
+          - java.lang.RuntimeException
+
