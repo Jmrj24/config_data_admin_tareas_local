@@ -23,5 +23,5 @@ resilience4j:
     instances:
       users-service:
         ignoreExceptions:
-          - com.example.tasks_service.exception.NotFoundException
+          - feign.FeignException$NotFound
 
