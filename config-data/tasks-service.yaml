@@ -18,5 +18,10 @@ eureka:
     service-url:
       defaultZone: http://localhost:8761/eureka
 
-
+resilience4j:
+  circuitbreaker:
+    instances:
+      users-service:
+        ignoreExceptions:
+          - com.example.tasks_service.exception.NotFoundException
 
