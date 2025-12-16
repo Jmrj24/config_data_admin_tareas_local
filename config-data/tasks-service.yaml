@@ -30,7 +30,5 @@ resilience4j:
         waitDurationInOpenState: 10s
         recordExceptions:
           - feign.FeignException
-          - org.springframework.cloud.client.loadbalancer.LoadBalancerException
-          - java.lang.IllegalStateException
           - java.lang.RuntimeException
 
