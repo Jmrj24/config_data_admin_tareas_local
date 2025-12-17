@@ -17,14 +17,3 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka
-
-resilience4j:
-  circuitbreaker:
-    configs:
-      default: # Configuración base
-        slidingWindowSize: 10
-        ignoreExceptions:
-          - feign.FeignException.NotFound
-    instances:
-      users-service:
-        baseConfig: default # Hereda lo de arriba
