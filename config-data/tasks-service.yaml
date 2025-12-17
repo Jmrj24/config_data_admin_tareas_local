@@ -29,4 +29,5 @@ resilience4j:
         recordExceptions:
           - feign.FeignException
         ignoreExceptions:
-          - feign.FeignException.NotFound
+          - feign.FeignException$NotFound
+          
