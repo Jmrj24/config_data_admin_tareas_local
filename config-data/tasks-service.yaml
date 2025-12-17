@@ -29,4 +29,4 @@ resilience4j:
         recordExceptions:
           - feign.FeignException
         ignoreExceptions:
-          - com.example.tasks_service.exception.NotFoundException
+          - FeignException.NotFound
