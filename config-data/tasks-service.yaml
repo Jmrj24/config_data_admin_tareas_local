@@ -21,8 +21,14 @@ eureka:
 resilience4j:
   circuitbreaker:
     instances:
-      users-service: 
-        # Esto es lo único obligatorio para tu caso
+      users-service:
+        registerHealthIndicator: true
+        slidingWindowSize: 10
+        permittedNumberOfCallsInHalfOpenState: 3
+        slidingWindowType: COUNT_BASED
+        minimumNumberOfCalls: 5
+        waitDurationInOpenState: 50s
+        failureRateThreshold: 50 
         ignoreExceptions:
           - feign.FeignException$NotFound
           - feign.FeignException.BadRequest
