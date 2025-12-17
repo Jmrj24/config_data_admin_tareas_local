@@ -20,9 +20,11 @@ eureka:
 
 resilience4j:
   circuitbreaker:
-    instances:
-      users-service: 
+    configs:
+      default: # Configuración base
+        slidingWindowSize: 10
         ignoreExceptions:
-          - feign.FeignException$NotFound  # A veces se usa con $ si es clase interna
-          - feign.FeignException.FeignClientException 
-
+          - feign.FeignException.NotFound
+    instances:
+      users-service:
+        baseConfig: default # Hereda lo de arriba
