@@ -24,6 +24,6 @@ resilience4j:
       users-service: 
         # Esto es lo único obligatorio para tu caso
         ignoreExceptions:
-          - feign.FeignException.NotFound
+          - feign.FeignException$NotFound
           - feign.FeignException.BadRequest
           
