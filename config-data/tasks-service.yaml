@@ -23,6 +23,6 @@ resilience4j:
     instances:
       users-service: 
         ignoreExceptions:
-          - feign.FeignException.NotFound
-          - feign.FeignException.BadRequest
+          - feign.FeignException$NotFound  # A veces se usa con $ si es clase interna
+          - feign.FeignException.FeignClientException 
 
