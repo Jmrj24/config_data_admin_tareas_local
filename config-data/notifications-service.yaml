@@ -14,5 +14,5 @@ mailtrap:
   api:
     token: ${PASSWORD_MAIL}
   sender: 
-    email: hello@demomailtrap.com
+    email: hello@admintask.com
     name: Notificaciones Administrador de Tareas
